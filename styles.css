@@ -1,15 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    text-align: center; /* Centralizar texto */
 }
 
 header {
     background-color: #003366;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 0; /* Aumentado para mais espaço */
+    font-size: 1.5em; /* Aumenta o tamanho da fonte do header */
 }
 
 header nav ul {
@@ -19,63 +21,79 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 20px; /* Mais espaço entre os itens do menu */
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2em; /* Aumentado para melhor legibilidade */
 }
 
 #hero {
     background-color: #004080;
     color: #fff;
-    padding: 60px 20px;
+    padding: 100px 20px; /* Aumentado para uma aparência mais imponente */
     text-align: center;
+    font-size: 2em; /* Fonte maior para o texto principal */
 }
 
 .cta-button {
     background-color: #0099cc;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Botão maior para ser mais chamativo */
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 1.2em; /* Fonte maior no botão */
 }
 
 #sobre, #servico, #testemunhos, #contato {
-    padding: 40px 20px;
+    padding: 60px 20px; /* Aumentado para mais espaço em cada seção */
     background-color: #fff;
     margin-bottom: 20px;
+    text-align: center; /* Centralizar texto */
+    font-size: 1.3em; /* Fonte maior para conteúdo das seções */
 }
 
 h3 {
     color: #003366;
+    font-size: 2em; /* Aumentado para destacar os títulos */
 }
 
 .step, .testimonial {
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Mais espaço entre os elementos */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px; /* Aumentado para mais espaço */
     background-color: #003366;
     color: #fff;
+    font-size: 1.2em; /* Fonte maior no rodapé */
 }
 
 form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    width: 80%; /* Reduzido para parecer mais elegante */
+    padding: 15px; /* Aumentado para mais conforto ao digitar */
+    margin-bottom: 20px; /* Mais espaço entre os campos */
+    font-size: 1.2em; /* Fonte maior para melhor usabilidade */
+    border: 1px solid #ccc; /* Adiciona uma borda sutil */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
 form button {
     background-color: #0099cc;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Botão maior para ser mais chamativo */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.2em; /* Fonte maior no botão de envio */
+    transition: background-color 0.3s ease; /* Suave transição de cor */
+}
+
+form button:hover {
+    background-color: #0077aa; /* Cor mais escura ao passar o mouse */
 }

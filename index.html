@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vô Tech - SEU SITE DE GESTÃO, AUTOMAÇÃO E ENSINO</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000; /* Fundo preto */
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        header {
+            background-color: #000; /* Fundo preto */
+            color: #fff;
+            padding: 1rem;
+            text-align: center; /* Centralizar o texto */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 170px; /* Aumentado para acomodar o logotipo maior */
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centralizar os itens */
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centralizar os itens */
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+        }
+        header .logo-whatsapp {
+            display: flex;
+            align-items: center;
+        }
+        header .logo-whatsapp img {
+            width: 125px; /* Aumentado em aproximadamente 25% */
+            height: 125px; /* Aumentado em aproximadamente 25% */
+            margin-right: 1rem;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding-bottom: 5rem; /* Adicionado mais espaço no fundo */
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            margin: 1rem;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            flex: 1 1 30%; /* Ajusta os produtos para que ocupem 30% do contêiner pai */
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product h2 {
+            font-size: 1.5rem;
+            color: #102040;
+            margin-top: 0.5rem;
+            text-decoration: underline;
+            text-decoration-color: #102040; /* Azul escuro sério */
+        }
+        .product p {
+            color: #777;
+        }
+        .product .price {
+            color: #b12704;
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .filters select, .filters input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .filters select:focus, .filters input:focus {
+            border-color: #102040;
+        }
+        footer {
+            background-color: #000; /* Fundo preto */
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        /* Botões flutuantes */
+        .float-button-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* Ajuste para a posição correta */
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .float-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .whatsapp-float {
+            background-color: #25d366;
+            color: #fff;
+        }
+
+        .whatsapp-float img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .resgatar-brinde {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            header {
+                justify-content: center; /* Centralizar no mobile */
+                text-align: center; /* Centralizar no mobile */
+            }
+            header h1 {
+                font-size: 1rem;
+            }
+            header .logo-whatsapp {
+                flex-direction: column;
+            }
+            header .logo-whatsapp img {
+                width: 80px;
+                height: 80px;
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            .product {
+                flex-basis: 100%; /* Um produto por linha em telas pequenas */
+                margin: 1rem 0; /* Espaçamento entre os produtos */
+            }
+            .whatsapp-float img {
+                width: 40px;
+                height: 40px;
+            }
+            .float-button-container {
+                flex-direction: column;
+                right: 10px;
+            }
+            .float-button {
+                font-size: 0.8rem;
+                padding: 8px 16px;
+            }
+        }
+        @media (min-width: 481px) and (max-width: 768px) {
+            .product {
+                flex-basis: calc(33.333% - 2rem); /* Três produtos por linha em telas médias */
+            }
+            .whatsapp-float img {
+                width: 40px;
+                height: 40px;
+            }
+            .float-button-container {
+                flex-direction: row-reverse;
+                right: 20px;
+            }
+            .float-button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+        @media (min-width: 769px) {
+            .product {
+                flex-basis: calc(33.333% - 2rem); /* Três produtos por linha em telas grandes */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-whatsapp">
+                <img src="https://i.imgur.com/fdI9pS4.png" alt="Logotipo">
+                <h1>Vô Tech: Seu site de Gestão, Automação e Ensino!</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filters">
+            <select id="category-filter">
+                <option value="all">Todas as Categorias</option>
+                <option value="servicos">Serviços</option>
+                <option value="cursos-consultorias">Cursos/Consultorias</option>
+            </select>
+            <input type="text" id="search-filter" placeholder="Buscar...">
+        </div>
+
+        <div class="product-list">
+            <div class="product" data-category="servicos">
+                <a href="servico1.html">
+                    <img src="https://i.imgur.com/ZJE6e9R.png" alt="Implantação de Automação Integrada">
+                    <h2>Implantação de Automação Integrada</h2>
+                </a>
+                <p>Otimize seus processos empresariais com nossa consultoria especializada. Reduza custos e aumente a eficiência operacional.</p>
+                <div class="price">Entre em contato</div>
+            </div>
+            <div class="product" data-category="servicos">
+                <a href="servico2.html">
+                    <img src="https://i.imgur.com/jUpo7do.jpeg" alt="Desenvolvimento de Software Personalizado">
+                    <h2>Desenvolvimento de Software Personalizado</h2>
+                </a>
+                <p>Transforme suas ideias em soluções digitais. Nosso time desenvolve softwares sob medida para atender suas necessidades específicas.</p>
+                <div class="price">Entre em contato</div>
+            </div>
+            <div class="product" data-category="servicos">
+                <a href="servico3.html">
+                    <img src="https://i.imgur.com/blNcmM8.jpeg" alt="Suporte Técnico e Manutenção">
+                    <h2>Suporte Técnico e Manutenção</h2>
+                </a>
+                <p>Garanta o funcionamento contínuo de seus sistemas com nosso suporte técnico. Atendimento rápido e eficiente.</p>
+                <div class="price">Entre em contato</div>
+            </div>
+            <div class="product" data-category="cursos-consultorias">
+                <a href="produto4.html">
+                    <img src="https://i.imgur.com/ZgCzUlh.jpeg" alt="Mentoria Transformando a IA no seu Melhor Colaborador">
+                    <h2>Mentoria Transformando a IA no seu Melhor Colaborador</h2>
+                </a>
+                <p>Aprenda a integrar a Inteligência Artificial ao seu dia a dia profissional e transforme a IA no seu aliado mais poderoso.</p>
+                <div class="price">Entre em contato</div>
+            </div>
+            <div class="product" data-category="cursos-consultorias">
+                <a href="produto5.html">
+                    <img src="https://i.imgur.com/m0DCy7z.png" alt="Curso de Excel com VBA e IA">
+                    <h2>Curso de Excel com VBA e IA</h2>
+                </a>
+                <p>Automatize suas tarefas e crie soluções poderosas com o Excel VBA. Inclui dicas exclusivas de IA.</p>
+                <div class="price">Entre em contato</div>
+            </div>
+            <div class="product" data-category="servicos">
+                <a href="servico6.html">
+                    <img src="https://i.imgur.com/tReDa0v.jpeg" alt="Criação de Fluxo Automatizado para Marketing Digital">
+                    <h2>Criação de Fluxo Automatizado para Marketing Digital</h2>
+                </a>
+                <p>Impulsione seu negócio com estratégias de marketing digital automatizadas. Nossos especialistas ajudarão você a alcançar mais clientes.</p>
+                <div class="price">Entre em contato</div>
+            </div>
+            <div class="product" data-category="cursos-consultorias">
+                <a href="produto8.html">
+                    <img src="https://i.imgur.com/ORYG9t0.png" alt="Curso de IA para criar sites">
+                    <h2>Curso de IA para criar sites</h2>
+                </a>
+                <p>Construa sites incríveis e aumente suas vendas com nosso curso de IA. Tudo o que você precisa saber em um só lugar.</p>
+                <div class="price">Entre em contato</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vô Tech. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="float-button-container">
+        <a class="float-button resgatar-brinde" href="https://forms.gle/1uEhhGFarZ8HfTDb6" target="_blank">Resgatar Brinde</a>
+        <a class="float-button whatsapp-float" href="https://wa.me/557798272220" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('category-filter').addEventListener('change', filterProducts);
+        document.getElementById('search-filter').addEventListener('input', filterProducts);
+
+        function filterProducts() {
+            const category = document.getElementById('category-filter').value;
+            const search = document.getElementById('search-filter').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const productCategory = product.getAttribute('data-category');
+                const productName = product.querySelector('h2').innerText.toLowerCase();
+                if ((category === 'all' || productCategory === category) && productName.includes(search)) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

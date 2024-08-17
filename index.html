@@ -1,90 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Serviço 'Entendendo o Cliente Ideal' - Identifique e segmente seu público-alvo de forma eficaz.">
-    <meta name="keywords" content="Cliente Ideal, Consultoria, Segmentação de Mercado, Estratégia de Marketing">
-    <title>Entendendo o Cliente Ideal</title>
+    <title>InovaGestão - Simplifique a Gestão do Seu Negócio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
+        <div class="container">
             <h1>InovaGestão</h1>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servico">Serviço</a></li>
-                <li><a href="#testemunhos">Testemunhos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <section id="hero">
-        <h2>Entendendo o Cliente Ideal</h2>
-        <p>Transforme sua estratégia de negócios com uma compreensão aprofundada do seu público-alvo.</p>
-        <a href="#contato" class="cta-button">Agende uma Consulta Gratuita</a>
-    </section>
-
-    <section id="sobre">
-        <h3>Sobre o Serviço</h3>
-        <p>Nosso serviço ajuda você a identificar e segmentar o seu cliente ideal, permitindo que suas campanhas de marketing sejam mais eficazes e direcionadas.</p>
-        <p>Utilizamos metodologias avançadas de análise de dados para fornecer insights que irão transformar a sua abordagem de mercado.</p>
-    </section>
-
-    <section id="servico">
-        <h3>Como Funciona</h3>
-        <div class="step">
-            <h4>1. Análise Inicial</h4>
-            <p>Realizamos uma análise inicial do seu negócio e do mercado para identificar o perfil ideal do seu cliente.</p>
-        </div>
-        <div class="step">
-            <h4>2. Estratégia Personalizada</h4>
-            <p>Desenvolvemos uma estratégia personalizada com base nos dados coletados.</p>
-        </div>
-        <div class="step">
-            <h4>3. Implementação e Acompanhamento</h4>
-            <p>Acompanhamos a implementação e ajustamos a estratégia conforme necessário para garantir os melhores resultados.</p>
+    <section id="home" class="hero">
+        <div class="container hero-text">
+            <h2>Automatize a Gestão do Seu Negócio</h2>
+            <p>Simplifique processos, economize tempo e foque no que realmente importa.</p>
         </div>
     </section>
-
-    <section id="testemunhos">
-        <h3>O Que Nossos Clientes Dizem</h3>
-        <div class="testimonial">
-            <p>"Graças à InovaGestão, conseguimos triplicar nossas conversões em apenas três meses!"</p>
-            <p>- Empresa XYZ</p>
-        </div>
-        <div class="testimonial">
-            <p>"O serviço de Entendendo o Cliente Ideal nos deu insights valiosos que transformaram nossa abordagem de marketing."</p>
-            <p>- Startup ABC</p>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre o InovaGestão</h2>
+            <p>O InovaGestão é a solução ideal para pequenas empresas e MEIs que buscam eficiência e controle em suas operações diárias. Nosso sistema oferece automação, dashboards intuitivos e backups automáticos, tudo isso em uma plataforma fácil de usar e acessível.</p>
         </div>
     </section>
-
-    <section id="contato">
-        <h3>Entre em Contato</h3>
-        <p>Pronto para transformar seu negócio? Agende uma consulta gratuita agora mesmo.</p>
-        <form action="https://example.com/form-handler" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-            <button type="submit" class="cta-button">Enviar</button>
-        </form>
+    <section id="services" class="inventory">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="car-list">
+                <div class="car">
+                    <img src="https://i.imgur.com/6j0ckxv.png" alt="Automação de Processos">
+                    <h3>Automação de Processos</h3>
+                    <p>Deixe as tarefas repetitivas com a gente e foque no crescimento do seu negócio.</p>
+                </div>
+                <div class="car">
+                    <img src="https://i.imgur.com/oXoxOsY.png" alt="Dashboards Inteligentes">
+                    <h3>Dashboards Inteligentes</h3>
+                    <p>Visualize todos os dados importantes em um só lugar e tome decisões mais rápidas e precisas.</p>
+                </div>
+                <div class="car">
+                    <img src="https://i.imgur.com/DV9S0HT.png" alt="Backups Automáticos">
+                    <h3>Backups Automáticos</h3>
+                    <p>Seus dados sempre seguros e disponíveis, sem que você precise se preocupar.</p>
+                </div>
+                <!-- Adicione mais serviços conforme necessário -->
+            </div>
+        </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 InovaGestão. Todos os direitos reservados.</p>
+    <footer class="floating-footer">
+        <div class="container">
+            <p>&copy; 2024 InovaGestão. Todos os direitos reservados.</p>
+        </div>
     </footer>
-
-    <!-- Botão de WhatsApp flutuante -->
-    <a href="https://wa.me/SEUNUMEROAQUI" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/554591190099" class="whatsapp-button" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
-
-    <script src="scripts.js"></script>
 </body>
 </html>

@@ -148,6 +148,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     width: auto;
+    white-space: nowrap; /* Evita quebra de linha */
 }
 
 .whatsapp-button {
